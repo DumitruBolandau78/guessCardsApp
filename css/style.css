@@ -1,0 +1,80 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: whitesmoke;
+}
+
+.container-inner {
+    max-width: 1200px;
+    width: 100%;
+    height: 90vh;
+    background-color: green;
+    display: flex;
+}
+
+.sidebar {
+    background-color: #a3c000;
+    width: 30%;
+    border: 10px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.sidebar .timer, .sidebar .clicks {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.sidebar .best-score {
+    color: #900;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.sidebar .restart button {
+    outline: none;
+    border: 2px solid #900;
+    font-size: 25px;
+    font-weight: bold;
+    color: #900;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+.board {
+    width: 70%;
+    background-color: #900;
+    border: 10px solid;
+    border-left: none;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(6, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.animation-scale {
+    animation: scale 300ms forwards;
+}
+
+@keyframes scale {
+    from {
+        transform: scale(1);
+    } to {
+        transform: scale(0);
+    }
+}
